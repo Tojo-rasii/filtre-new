@@ -23,25 +23,18 @@
         input,
         button {
             font-family: 'Montserrat', sans-serif;
+            font-size: 0.95em;
         }
 
         .resp-width {
-            width: 95.5%;
+            width: 85.5%;
             margin: 0 auto;
-        }
-
-        .section_filtre_row {
-            display: grid;
-            grid-template-columns: 1.9fr repeat(3, 1fr);
-            max-width: 100%;
-            gap: 1.5em;
-            row-gap: 1.5em;
         }
 
         .section_filtre_row {
             display: flex;
             flex-direction: row;
-
+            gap: 1.5em;
         }
 
 
@@ -58,13 +51,10 @@
             flex-direction: row;
             gap: 0.2em;
             align-items: center;
-            outline: 1.5px solid #D7D7D7;
-            /* flex: 1; */
+            outline: 1.5px solid #00919e;
+            flex: 1;
             border-radius: 0.7em;
-            width: 100%;
         }
-
-
 
         .section_filtre_label i {
             height: max-content;
@@ -77,9 +67,21 @@
         .section_filtre_label input {
             background: none;
             border: none;
-            padding: 1em;
+            padding: 1.3em 1.1em;
             outline: none;
             width: 100%;
+        }
+
+        .placeholder::placeholder {
+            color: rgb(29, 29, 29);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500 !important;
+        }
+
+        .placeholder:read-only {
+            color: rgb(29, 29, 29);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500 !important;
         }
 
 
@@ -88,13 +90,13 @@
             /* background: red; */
             display: flex;
             flex-direction: row;
-            gap: 0.2em;
+            gap: 0.5em;
             align-items: center;
-            outline: 1.5px solid #D7D7D7;
+            outline: 1.5px solid #00919e;
             border-radius: 0.7em;
-            /* width: 100%; */
+            width: max-content;
             cursor: pointer;
-            padding: 0.7em 1.5em;
+            padding: 0.7em 1.8em;
             transition: 0.1s;
         }
 
@@ -107,10 +109,9 @@
         .action_plus_critere {
             display: flex;
             flex-direction: row;
-            gap: 0.5em;
+            gap: 0.4em;
             align-items: center;
-            width: 100%;
-            text-wrap: nowrap;
+            width: max-content;
         }
 
         .plus_text_strong {
@@ -124,7 +125,6 @@
             height: max-content;
             display: flex;
             flex-direction: row;
-            padding: 0.7em 0;
             padding-left: 1em;
             align-items: center;
         }
@@ -139,7 +139,6 @@
             border-radius: 0.7em;
             width: max-content;
             /* margin: 1em 0; */
-            margin: 0.3em 0;
             cursor: pointer;
 
         }
@@ -183,29 +182,15 @@
 
         @media (min-width: 480px) {
             .section_filtre_row_flex_3 {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(1, 1fr);
             }
-
-            .category_items_container {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 1em;
-                padding: 1em;
-            }
-
         }
 
         @media (min-width: 768px) {
             .section_filtre_row_flex_3 {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .category_items_container {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 1em;
-                padding: 1em;
-            }
 
         }
 
@@ -213,22 +198,6 @@
             .section_filtre_row_flex_3 {
                 grid-template-columns: repeat(2, 1fr);
 
-            }
-
-            .section_filtre_row_flex_new {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr) !important;
-
-                max-width: 100%;
-                gap: 1.5em;
-                row-gap: 1.5em;
-            }
-
-            .category_items_container {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr) !important;
-                gap: 1em;
-                padding: 1em;
             }
 
 
@@ -240,7 +209,7 @@
             flex-direction: row;
             gap: 0.2em;
             align-items: center;
-            outline: 1.5px solid #D7D7D7;
+            outline: 1.5px solid #00919e;
             flex: 1;
             transition: 0.1s;
 
@@ -292,34 +261,17 @@
             top: 6em;
             width: 100%;
             overflow: hidden;
-            outline: 1.5px solid #D7D7D7;
+            outline: 1.5px solid #A6A3A3;
 
-        }
-
-        .pagination_controls {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .pagination_controls button {
-            padding: 0.4rem 1rem;
-            cursor: pointer;
         }
 
         .option_select_filter_item {
             padding: 1em 1.5em;
             /* background: red; */
-            border-bottom: 1px solid #D7D7D7;
+            border-bottom: 1px solid #A6A3A3;
             cursor: pointer;
             transition: 0.1s;
-        }
-
-        .option_select_filter_item:last-child {
-
-            border-bottom: none;
-
+            font-weight: 500;
         }
 
         .option_select_filter_item:hover {
@@ -376,76 +328,6 @@
             cursor: pointer;
         }
 
-        .categories_first {
-            width: max-content;
-        }
-
-        .categories_first_parent .option_select_filter {
-            top: 4.5em;
-            overflow: visible;
-            display: grid;
-            width: max-content;
-
-
-        }
-
-        .category_items_container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1em;
-            padding: 1em;
-        }
-
-        .categories_first_parent .option_select_filter_item {
-
-            border-bottom: none;
-            width: max-content;
-            border-radius: 0.3em;
-
-        }
-
-        .option_select_filter_item:hover {
-            background: #e2e2e241;
-
-        }
-
-        .pagination_buttons_container {
-            display: flex;
-            font-size: 0.9em;
-            flex-direction: row;
-            /* gap: 0.5em; */
-            border-top: 1px solid #e9e9e9;
-            margin: 0 1em;
-            padding: 1em 0;
-        }
-
-        .pagination_buttons_container button {
-            display: flex;
-            text-wrap: nowrap;
-            gap: 0.5em;
-            padding: 1em 1.5em;
-            background: none;
-            font-size: 0.95em;
-            border: none;
-            cursor: pointer;
-            border-radius: 0.3em;
-            transition: 0.1s;
-        }
-
-        .pagination_buttons_container button:hover {
-            background: #e2e2e241;
-        }
-
-        .pagination_buttons_container button:disabled:hover {
-            background: none;
-            cursor: default;
-
-        }
-
-        .objet_transforme_first {
-            width: max-content;
-        }
-
         /* 
         #filtre1{
             display: none;
@@ -469,102 +351,9 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: end;
+            justify-content: space-between;
             align-items: center;
             gap: 1em;
-        }
-
-        @media (max-width: 700px) {
-            .row_trie_recente {
-
-                gap: 2em;
-            }
-
-            .row-inpt-trie {
-
-                justify-content: start;
-
-            }
-
-            .section_filtre_label input {
-                padding: 1.5em;
-            }
-
-            .categories_first,
-            .objet_transforme_first {
-                width: 100%;
-            }
-
-            .category_items_container {
-                grid-template-columns: repeat(3, 1fr) !important;
-
-            }
-        }
-
-
-        @media (max-width: 455px) {
-            .category_items_container {
-                grid-template-columns: repeat(2, 1fr) !important;
-
-            }
-
-            .categories_first_parent .option_select_filter {
-
-                width: 100%;
-            }
-
-
-        }
-
-        @media (max-width: 1100px) and (min-width:700px) {
-            .section_filtre_label {
-                min-width: 100%;
-            }
-
-            .section_filtre_label input {
-                padding: 1.5em;
-            }
-
-            .section_filtre_row {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 310px) {
-            .category_items_container {
-                grid-template-columns: repeat(1, 1fr) !important;
-
-            }
-
-            .categories_first_parent .option_select_filter {
-                width: 100%;
-            }
-
-            .categories_first_parent .option_select_filter_item {
-                width: 100%;
-                text-align: center;
-
-            }
-
-            .pagination_buttons_container {
-                flex-wrap: wrap;
-            }
-
-            .btn_reset_filter {
-                width: 100%;
-            }
-
-            .tri_plus_recente {
-                width: 100% !important;
-            }
-
-            .row-inpt-trie {
-                width: 100% !important;
-            }
-
         }
 
         .row-inpt-trie .section_filtre_label_grid input {
@@ -576,9 +365,6 @@
             padding: 1em;
         }
 
-        .tri_plus_recente {
-            width: 65%;
-        }
 
         .row-inpt-trie .option_select_filter {
 
@@ -586,6 +372,10 @@
 
 
         }
+
+        /* .outline_green{
+            outline: 1px solid #027580;
+        } */
     </style>
 </head>
 
@@ -597,7 +387,7 @@
             </div>
             <div class="section_filtre_content">
                 <div class="section_filtre_row col_mediaquery">
-                    <label class="section_filtre_label first_col_grid">
+                    <label class="section_filtre_label">
                         <i>
                             <svg width="16" height="16" viewBox="0 0 25 26" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -609,45 +399,10 @@
                         </i>
                         <input type="text" placeholder="Rechercher une transformation">
                     </label>
-                    <!-- categ -->
-                    <!-- col1 -->
-                    <div class="column_filter_label categories_first_parent">
-                        <div class="section_filtre_label_grid c-pointer categories_first">
-                            <i>
-                                <svg width="16" height="16" viewBox="0 0 29 29" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M0 3.10714C0 2.28308 0.327359 1.49276 0.910061 0.910061C1.49276 0.327359 2.28308 0 3.10714 0H9.32143C10.1455 0 10.9358 0.327359 11.5185 0.910061C12.1012 1.49276 12.4286 2.28308 12.4286 3.10714V9.32143C12.4286 10.1455 12.1012 10.9358 11.5185 11.5185C10.9358 12.1012 10.1455 12.4286 9.32143 12.4286H3.10714C2.28308 12.4286 1.49276 12.1012 0.910061 11.5185C0.327359 10.9358 0 10.1455 0 9.32143V3.10714ZM3.10714 2.07143C2.83245 2.07143 2.56902 2.18055 2.37478 2.37478C2.18055 2.56902 2.07143 2.83245 2.07143 3.10714V9.32143C2.07143 9.59612 2.18055 9.85955 2.37478 10.0538C2.56902 10.248 2.83245 10.3571 3.10714 10.3571H9.32143C9.59612 10.3571 9.85955 10.248 10.0538 10.0538C10.248 9.85955 10.3571 9.59612 10.3571 9.32143V3.10714C10.3571 2.83245 10.248 2.56902 10.0538 2.37478C9.85955 2.18055 9.59612 2.07143 9.32143 2.07143H3.10714ZM16.5714 3.10714C16.5714 2.28308 16.8988 1.49276 17.4815 0.910061C18.0642 0.327359 18.8545 0 19.6786 0H25.8929C26.7169 0 27.5072 0.327359 28.0899 0.910061C28.6726 1.49276 29 2.28308 29 3.10714V9.32143C29 10.1455 28.6726 10.9358 28.0899 11.5185C27.5072 12.1012 26.7169 12.4286 25.8929 12.4286H19.6786C18.8545 12.4286 18.0642 12.1012 17.4815 11.5185C16.8988 10.9358 16.5714 10.1455 16.5714 9.32143V3.10714ZM19.6786 2.07143C19.4039 2.07143 19.1404 2.18055 18.9462 2.37478C18.752 2.56902 18.6429 2.83245 18.6429 3.10714V9.32143C18.6429 9.59612 18.752 9.85955 18.9462 10.0538C19.1404 10.248 19.4039 10.3571 19.6786 10.3571H25.8929C26.1675 10.3571 26.431 10.248 26.6252 10.0538C26.8195 9.85955 26.9286 9.59612 26.9286 9.32143V3.10714C26.9286 2.83245 26.8195 2.56902 26.6252 2.37478C26.431 2.18055 26.1675 2.07143 25.8929 2.07143H19.6786ZM0 19.6786C0 18.8545 0.327359 18.0642 0.910061 17.4815C1.49276 16.8988 2.28308 16.5714 3.10714 16.5714H9.32143C10.1455 16.5714 10.9358 16.8988 11.5185 17.4815C12.1012 18.0642 12.4286 18.8545 12.4286 19.6786V25.8929C12.4286 26.7169 12.1012 27.5072 11.5185 28.0899C10.9358 28.6726 10.1455 29 9.32143 29H3.10714C2.28308 29 1.49276 28.6726 0.910061 28.0899C0.327359 27.5072 0 26.7169 0 25.8929V19.6786ZM3.10714 18.6429C2.83245 18.6429 2.56902 18.752 2.37478 18.9462C2.18055 19.1404 2.07143 19.4039 2.07143 19.6786V25.8929C2.07143 26.1675 2.18055 26.431 2.37478 26.6252C2.56902 26.8195 2.83245 26.9286 3.10714 26.9286H9.32143C9.59612 26.9286 9.85955 26.8195 10.0538 26.6252C10.248 26.431 10.3571 26.1675 10.3571 25.8929V19.6786C10.3571 19.4039 10.248 19.1404 10.0538 18.9462C9.85955 18.752 9.59612 18.6429 9.32143 18.6429H3.10714ZM16.5714 19.6786C16.5714 18.8545 16.8988 18.0642 17.4815 17.4815C18.0642 16.8988 18.8545 16.5714 19.6786 16.5714H25.8929C26.7169 16.5714 27.5072 16.8988 28.0899 17.4815C28.6726 18.0642 29 18.8545 29 19.6786V25.8929C29 26.7169 28.6726 27.5072 28.0899 28.0899C27.5072 28.6726 26.7169 29 25.8929 29H19.6786C18.8545 29 18.0642 28.6726 17.4815 28.0899C16.8988 27.5072 16.5714 26.7169 16.5714 25.8929V19.6786ZM19.6786 18.6429C19.4039 18.6429 19.1404 18.752 18.9462 18.9462C18.752 19.1404 18.6429 19.4039 18.6429 19.6786V25.8929C18.6429 26.1675 18.752 26.431 18.9462 26.6252C19.1404 26.8195 19.4039 26.9286 19.6786 26.9286H25.8929C26.1675 26.9286 26.431 26.8195 26.6252 26.6252C26.8195 26.431 26.9286 26.1675 26.9286 25.8929V19.6786C26.9286 19.4039 26.8195 19.1404 26.6252 18.9462C26.431 18.752 26.1675 18.6429 25.8929 18.6429H19.6786Z"
-                                        fill="black" />
-                                </svg>
-
-
-                            </i>
-                            <input type="text" placeholder="Toutes les categories" readonly data-selected-value="">
-                            <i>
-                                <svg width="16" height="16" viewBox="0 0 25 15" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.20508 1.87115L13.1952 12.491L23.4725 1.87115" stroke="black"
-                                        stroke-width="3" />
-                                </svg>
-
-                            </i>
-                        </div>
-                        <!-- option select -->
-                        <div class="option_select_filter" id="categoryFilter" style="display: none;">
-                            <!-- list categ -->
-                            <div id="categoryItems" class="category_items_container"></div>
-                            <div id="paginationButtons" class="pagination_buttons_container"></div>
-                        </div>
-                    </div>
-                    <!-- end categ -->
-
-
-                    <!-- end objet -->
                     <label for="checkpop" class="section_plus_critere" data-pop="popup1">
                         <p class="action_plus_critere">
                             <span class="plus_text_strong">+</span>
-                            <span>de critères</span>
+                            <span style="font-weight: 500;">de critères</span>
                         </p>
                         <i>
                             <svg width="16" height="16" viewBox="0 0 28 24" fill="none"
@@ -663,7 +418,6 @@
 
                     <!-- autre critere -->
                 </div>
-
                 <div class="section_filtre_reset">
                     <hr>
                 </div>
@@ -672,7 +426,48 @@
                     <div class="section_filtre_column">
                         <div class="section_filtre_row_flex_3">
 
-                         
+                            <!-- col1 -->
+                            <div class="column_filter_label">
+                                <p style="font-weight: 500;">Catégories</p>
+                                <div class="section_filtre_label_grid c-pointer outline_green">
+                                    <i>
+                                        <svg width="16" height="16" viewBox="0 0 29 29" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0 3.10714C0 2.28308 0.327359 1.49276 0.910061 0.910061C1.49276 0.327359 2.28308 0 3.10714 0H9.32143C10.1455 0 10.9358 0.327359 11.5185 0.910061C12.1012 1.49276 12.4286 2.28308 12.4286 3.10714V9.32143C12.4286 10.1455 12.1012 10.9358 11.5185 11.5185C10.9358 12.1012 10.1455 12.4286 9.32143 12.4286H3.10714C2.28308 12.4286 1.49276 12.1012 0.910061 11.5185C0.327359 10.9358 0 10.1455 0 9.32143V3.10714ZM3.10714 2.07143C2.83245 2.07143 2.56902 2.18055 2.37478 2.37478C2.18055 2.56902 2.07143 2.83245 2.07143 3.10714V9.32143C2.07143 9.59612 2.18055 9.85955 2.37478 10.0538C2.56902 10.248 2.83245 10.3571 3.10714 10.3571H9.32143C9.59612 10.3571 9.85955 10.248 10.0538 10.0538C10.248 9.85955 10.3571 9.59612 10.3571 9.32143V3.10714C10.3571 2.83245 10.248 2.56902 10.0538 2.37478C9.85955 2.18055 9.59612 2.07143 9.32143 2.07143H3.10714ZM16.5714 3.10714C16.5714 2.28308 16.8988 1.49276 17.4815 0.910061C18.0642 0.327359 18.8545 0 19.6786 0H25.8929C26.7169 0 27.5072 0.327359 28.0899 0.910061C28.6726 1.49276 29 2.28308 29 3.10714V9.32143C29 10.1455 28.6726 10.9358 28.0899 11.5185C27.5072 12.1012 26.7169 12.4286 25.8929 12.4286H19.6786C18.8545 12.4286 18.0642 12.1012 17.4815 11.5185C16.8988 10.9358 16.5714 10.1455 16.5714 9.32143V3.10714ZM19.6786 2.07143C19.4039 2.07143 19.1404 2.18055 18.9462 2.37478C18.752 2.56902 18.6429 2.83245 18.6429 3.10714V9.32143C18.6429 9.59612 18.752 9.85955 18.9462 10.0538C19.1404 10.248 19.4039 10.3571 19.6786 10.3571H25.8929C26.1675 10.3571 26.431 10.248 26.6252 10.0538C26.8195 9.85955 26.9286 9.59612 26.9286 9.32143V3.10714C26.9286 2.83245 26.8195 2.56902 26.6252 2.37478C26.431 2.18055 26.1675 2.07143 25.8929 2.07143H19.6786ZM0 19.6786C0 18.8545 0.327359 18.0642 0.910061 17.4815C1.49276 16.8988 2.28308 16.5714 3.10714 16.5714H9.32143C10.1455 16.5714 10.9358 16.8988 11.5185 17.4815C12.1012 18.0642 12.4286 18.8545 12.4286 19.6786V25.8929C12.4286 26.7169 12.1012 27.5072 11.5185 28.0899C10.9358 28.6726 10.1455 29 9.32143 29H3.10714C2.28308 29 1.49276 28.6726 0.910061 28.0899C0.327359 27.5072 0 26.7169 0 25.8929V19.6786ZM3.10714 18.6429C2.83245 18.6429 2.56902 18.752 2.37478 18.9462C2.18055 19.1404 2.07143 19.4039 2.07143 19.6786V25.8929C2.07143 26.1675 2.18055 26.431 2.37478 26.6252C2.56902 26.8195 2.83245 26.9286 3.10714 26.9286H9.32143C9.59612 26.9286 9.85955 26.8195 10.0538 26.6252C10.248 26.431 10.3571 26.1675 10.3571 25.8929V19.6786C10.3571 19.4039 10.248 19.1404 10.0538 18.9462C9.85955 18.752 9.59612 18.6429 9.32143 18.6429H3.10714ZM16.5714 19.6786C16.5714 18.8545 16.8988 18.0642 17.4815 17.4815C18.0642 16.8988 18.8545 16.5714 19.6786 16.5714H25.8929C26.7169 16.5714 27.5072 16.8988 28.0899 17.4815C28.6726 18.0642 29 18.8545 29 19.6786V25.8929C29 26.7169 28.6726 27.5072 28.0899 28.0899C27.5072 28.6726 26.7169 29 25.8929 29H19.6786C18.8545 29 18.0642 28.6726 17.4815 28.0899C16.8988 27.5072 16.5714 26.7169 16.5714 25.8929V19.6786ZM19.6786 18.6429C19.4039 18.6429 19.1404 18.752 18.9462 18.9462C18.752 19.1404 18.6429 19.4039 18.6429 19.6786V25.8929C18.6429 26.1675 18.752 26.431 18.9462 26.6252C19.1404 26.8195 19.4039 26.9286 19.6786 26.9286H25.8929C26.1675 26.9286 26.431 26.8195 26.6252 26.6252C26.8195 26.431 26.9286 26.1675 26.9286 25.8929V19.6786C26.9286 19.4039 26.8195 19.1404 26.6252 18.9462C26.431 18.752 26.1675 18.6429 25.8929 18.6429H19.6786Z"
+                                                fill="black" />
+                                        </svg>
+
+
+                                    </i>
+                                    <input type="text" class="placeholder" placeholder="Toutes les categories" readonly
+                                        data-selected-value="">
+                                    <i>
+                                        <svg width="16" height="16" viewBox="0 0 25 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.20508 1.87115L13.1952 12.491L23.4725 1.87115" stroke="black"
+                                                stroke-width="3" />
+                                        </svg>
+
+                                    </i>
+                                </div>
+                                <!-- option select -->
+                                <div class="option_select_filter" style="display: none;">
+
+                                    <div class="option_select_filter_item" onclick="selectOption(this)"
+                                        data-value="Option1">
+                                        <p>Catégories 1</p>
+                                    </div>
+                                    <div class="option_select_filter_item" onclick="selectOption(this)"
+                                        data-value="Option2">
+                                        <p>Catégories 2</p>
+                                    </div>
+                                    <div class="option_select_filter_item" onclick="selectOption(this)"
+                                        data-value="Option3">
+                                        <p>Catégories 3</p>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- col1 -->
                             <div class="column_filter_label">
                                 <p style="font-weight: 500;">Objet transformé</p>
@@ -691,22 +486,7 @@
                                 </div>
                             </div>
 
-                            <!-- col1 -->
-                            <div class="column_filter_label">
-                                <p>Métier de l'auteur</p>
-                                <div class="section_filtre_label_grid">
-                                    <i>
-                                        <svg width="16" height="16" viewBox="0 0 30 30" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12.1875 0C11.4416 0 10.7262 0.364697 10.1988 1.01386C9.67132 1.66303 9.375 2.54348 9.375 3.46154V4.61538H2.8125C2.06658 4.61538 1.35121 4.98008 0.823762 5.62925C0.296316 6.27841 0 7.15887 0 8.07692L0 26.5385C0 27.4565 0.296316 28.337 0.823762 28.9861C1.35121 29.6353 2.06658 30 2.8125 30H27.1875C27.9334 30 28.6488 29.6353 29.1762 28.9861C29.7037 28.337 30 27.4565 30 26.5385V8.07692C30 7.15887 29.7037 6.27841 29.1762 5.62925C28.6488 4.98008 27.9334 4.61538 27.1875 4.61538H20.625V3.46154C20.625 2.54348 20.3287 1.66303 19.8012 1.01386C19.2738 0.364697 18.5584 0 17.8125 0H12.1875ZM12.1875 2.30769H17.8125C18.0611 2.30769 18.2996 2.42926 18.4754 2.64565C18.6512 2.86203 18.75 3.15552 18.75 3.46154V4.61538H11.25V3.46154C11.25 3.15552 11.3488 2.86203 11.5246 2.64565C11.7004 2.42926 11.9389 2.30769 12.1875 2.30769ZM15.7237 18.2631L28.125 14.1946V26.5385C28.125 26.8445 28.0262 27.138 27.8504 27.3544C27.6746 27.5707 27.4361 27.6923 27.1875 27.6923H2.8125C2.56386 27.6923 2.3254 27.5707 2.14959 27.3544C1.97377 27.138 1.875 26.8445 1.875 26.5385V14.1923L14.2762 18.2631C14.7505 18.4185 15.2495 18.4185 15.7237 18.2631ZM2.8125 6.92308H27.1875C27.4361 6.92308 27.6746 7.04464 27.8504 7.26103C28.0262 7.47742 28.125 7.7709 28.125 8.07692V11.8062L15.2419 16.0338C15.0834 16.0859 14.9166 16.0859 14.7581 16.0338L1.875 11.8062V8.07692C1.875 7.7709 1.97377 7.47742 2.14959 7.26103C2.3254 7.04464 2.56386 6.92308 2.8125 6.92308Z"
-                                                fill="black" />
-                                        </svg>
 
-                                    </i>
-                                    <input type="text" placeholder="ex : Peintre, Styliste">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -719,11 +499,27 @@
 
                     <div class="section_filtre_input_select">
                         <div class="section_filtre_column">
-                            <div class="section_filtre_row_flex_new">
+                            <div class="section_filtre_row_flex_3">
 
                                 <!-- col1 -->
                                 <div class="column_filter_label">
-                                    <p>Localisation</p>
+                                    <p style="font-weight: 500;">Métier</p>
+                                    <div class="section_filtre_label_grid">
+                                        <i>
+                                            <svg width="16" height="16" viewBox="0 0 30 30" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12.1875 0C11.4416 0 10.7262 0.364697 10.1988 1.01386C9.67132 1.66303 9.375 2.54348 9.375 3.46154V4.61538H2.8125C2.06658 4.61538 1.35121 4.98008 0.823762 5.62925C0.296316 6.27841 0 7.15887 0 8.07692L0 26.5385C0 27.4565 0.296316 28.337 0.823762 28.9861C1.35121 29.6353 2.06658 30 2.8125 30H27.1875C27.9334 30 28.6488 29.6353 29.1762 28.9861C29.7037 28.337 30 27.4565 30 26.5385V8.07692C30 7.15887 29.7037 6.27841 29.1762 5.62925C28.6488 4.98008 27.9334 4.61538 27.1875 4.61538H20.625V3.46154C20.625 2.54348 20.3287 1.66303 19.8012 1.01386C19.2738 0.364697 18.5584 0 17.8125 0H12.1875ZM12.1875 2.30769H17.8125C18.0611 2.30769 18.2996 2.42926 18.4754 2.64565C18.6512 2.86203 18.75 3.15552 18.75 3.46154V4.61538H11.25V3.46154C11.25 3.15552 11.3488 2.86203 11.5246 2.64565C11.7004 2.42926 11.9389 2.30769 12.1875 2.30769ZM15.7237 18.2631L28.125 14.1946V26.5385C28.125 26.8445 28.0262 27.138 27.8504 27.3544C27.6746 27.5707 27.4361 27.6923 27.1875 27.6923H2.8125C2.56386 27.6923 2.3254 27.5707 2.14959 27.3544C1.97377 27.138 1.875 26.8445 1.875 26.5385V14.1923L14.2762 18.2631C14.7505 18.4185 15.2495 18.4185 15.7237 18.2631ZM2.8125 6.92308H27.1875C27.4361 6.92308 27.6746 7.04464 27.8504 7.26103C28.0262 7.47742 28.125 7.7709 28.125 8.07692V11.8062L15.2419 16.0338C15.0834 16.0859 14.9166 16.0859 14.7581 16.0338L1.875 11.8062V8.07692C1.875 7.7709 1.97377 7.47742 2.14959 7.26103C2.3254 7.04464 2.56386 6.92308 2.8125 6.92308Z"
+                                                    fill="black" />
+                                            </svg>
+
+                                        </i>
+                                        <input type="text" placeholder="ex : Peintre, Styliste">
+                                    </div>
+                                </div>
+                                <!-- col1 -->
+                                <div class="column_filter_label">
+                                    <p style="font-weight: 500;">Localisation</p>
                                     <div class="section_filtre_label_grid">
                                         <i>
                                             <svg width="16" height="16" viewBox="0 0 27 25" fill="none"
@@ -737,11 +533,9 @@
                                         <input type="text" placeholder="ex : Paris, Marseille...">
                                     </div>
                                 </div>
-
-
                                 <!-- col1 -->
                                 <div class="column_filter_label">
-                                    <p>Durée de transformation</p>
+                                    <p style="font-weight: 500;">Durée de transformation</p>
                                     <div class="section_filtre_label_grid c-pointer">
                                         <i>
                                             <svg width="16" height="16" viewBox="0 0 29 29" fill="none"
@@ -757,7 +551,7 @@
 
 
                                         </i>
-                                        <input type="text" placeholder="Durée" readonly>
+                                        <input type="text" class="placeholder" placeholder="Durée" readonly>
                                         <i>
                                             <svg width="16" height="16" viewBox="0 0 25 15" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -792,11 +586,10 @@
                                         </div>
                                     </div>
 
-
                                 </div>
                                 <!-- col1 -->
                                 <div class="column_filter_label">
-                                    <p>Status</p>
+                                    <p style="font-weight: 500;">Status</p>
                                     <div class="section_filtre_label_grid c-pointer">
                                         <i>
                                             <svg width="18" height="18" viewBox="0 0 32 24" fill="none"
@@ -812,8 +605,8 @@
 
 
                                         </i>
-                                        <input type="text" placeholder="Tous les status" readonly>
-                                        <i class="i-arrow-down">
+                                        <input type="text" placeholder="Tous les status" class="placeholder" readonly>
+                                        <i>
                                             <svg width="16" height="16" viewBox="0 0 25 15" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1.20508 1.87115L13.1952 12.491L23.4725 1.87115" stroke="black"
@@ -925,362 +718,257 @@
                     </div>
                 </div>
 
+
                 <button class="btn_reset_filter" id="reset_filtrer" disabled>Reinitialiser les filtres</button>
-            </div>
-        </div>
 
-        <!-- trie -->
-        <div class="row_trie_recente">
-            <p>1256 transformations trouvées</p>
 
-            <div class="row-inpt-trie">
-                <p>Trier par :</p>
-                <div class="column_filter_label tri_plus_recente">
-                    <div class="section_filtre_label_grid c-pointer">
-                        <input type="text" placeholder="Les plus récentes" readonly data-selected-value="">
-                        <i class="i-arrow-down">
-                            <svg width="16" height="16" viewBox="0 0 25 15" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.20508 1.87115L13.1952 12.491L23.4725 1.87115" stroke="black"
-                                    stroke-width="3" />
-                            </svg>
 
-                        </i>
-                    </div>
-                    <!-- option select -->
-                    <div class="option_select_filter" style="display: none;">
+                <!-- trie -->
+                <div class="row_trie_recente">
+                    <p style="font-weight: 500;">1256 transformations trouvées</p>
 
-                        <div class="option_select_filter_item" onclick="selectOption(this)" data-value="recent">
-                            <p>Les plus récentes</p>
+                    <div class="row-inpt-trie">
+                        <p style="font-weight: 500;">Trier par :</p>
+                        <div class="column_filter_label">
+                            <div class="section_filtre_label_grid c-pointer">
+                                <input type="text" class="placeholder" placeholder="Les plus récentes" readonly
+                                    data-selected-value="">
+                                <i>
+                                    <svg width="16" height="16" viewBox="0 0 25 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.20508 1.87115L13.1952 12.491L23.4725 1.87115" stroke="black"
+                                            stroke-width="3" />
+                                    </svg>
+
+                                </i>
+                            </div>
+                            <!-- option select -->
+                            <div class="option_select_filter" style="display: none;">
+
+                                <div class="option_select_filter_item" onclick="selectOption(this)" data-value="recent">
+                                    <p>Les plus récentes</p>
+                                </div>
+                                <div class="option_select_filter_item" onclick="selectOption(this)" data-value="oldest">
+                                    <p>Les plus anciennes</p>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="option_select_filter_item" onclick="selectOption(this)" data-value="oldest">
-                            <p>Les plus anciennes</p>
-                        </div>
-
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const input = document.getElementById('objet_transforme_first_id');
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const inputs = document.querySelectorAll('.section_filtre_label_grid input');
+                    const resetBtn = document.getElementById('reset_filtrer');
 
-            input.addEventListener('focus', () => {
-                input.placeholder = 'ex : Visage, Appartement...';
-                input.removeAttribute('readonly');
-                input.style.width = '15em';
-            });
+                    function checkInputs() {
+                        let isAnyFilled = Array.from(inputs).some(input => input.value.trim() !== '');
+                        resetBtn.disabled = !isAnyFilled;
+                    }
 
-            // (optionnel) Si tu veux remettre readonly et le placeholder d'origine quand on sort du champ
-            input.addEventListener('blur', () => {
-                input.placeholder = 'Objet transformé';
-                input.setAttribute('readonly', true);
-                input.style.width = '100%';
-
-            });
-            console.log(document.getElementById('objet_transforme_first_id'));
-
-        });
-    </script>
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const inputs = document.querySelectorAll('.section_filtre_label_grid input');
-            const resetBtn = document.getElementById('reset_filtrer');
-
-            function checkInputs() {
-                let isAnyFilled = Array.from(inputs).some(input => input.value.trim() !== '');
-                resetBtn.disabled = !isAnyFilled;
-            }
-
-            // Ajoute un listener à chaque input
-            inputs.forEach(input => {
-                input.addEventListener('input', checkInputs);
-                input.addEventListener('change', checkInputs); // Pour les readonly modifiés via JS
-            });
-
-            // Réinitialise tous les champs + .active_option
-            resetBtn.addEventListener('click', () => {
-                inputs.forEach(input => {
-                    input.value = '';
-                    input.dataset.selectedValue = ''; // pour les filtres personnalisés
-                });
-
-                // Supprime les classes actives éventuelles (ex: .active_option)
-                document.querySelectorAll('.active_option').forEach(el => {
-                    el.classList.remove('active_option');
-                });
-
-                // Ferme les dropdown si ouverts (optionnel)
-                document.querySelectorAll('.option_select_filter').forEach(el => {
-                    el.style.display = 'none';
-                });
-
-
-                resetBtn.disabled = true;
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const resetBtn = document.getElementById('reset_filtrer');
-
-            // Sélectionne uniquement les inputs des filtres hors zone "Trier par"
-            const filtreInputs = Array.from(document.querySelectorAll('.section_filtre_label input'))
-                .filter(input => !input.closest('.row-inpt-trie'));
-
-            function checkInputs() {
-                const isAnyFilled = filtreInputs.some(input => input.value.trim() !== '');
-                resetBtn.disabled = !isAnyFilled;
-            }
-
-            filtreInputs.forEach(input => {
-                input.addEventListener('input', checkInputs);
-                input.addEventListener('change', checkInputs);
-            });
-
-            resetBtn.addEventListener('click', () => {
-                // Reset uniquement les inputs hors zone "Trier par"
-                filtreInputs.forEach(input => {
-                    input.value = '';
-                    input.dataset.selectedValue = '';
-                });
-
-                // Enlève .active_option uniquement hors zone "Trier par"
-                document.querySelectorAll('.section_filtre_label:not(.row-inpt-trie .section_filtre_label) .active_option')
-                    .forEach(el => el.classList.remove('active_option'));
-
-                // Cache dropdowns uniquement hors zone "Trier par"
-                document.querySelectorAll('.option_select_filter')
-                    .forEach(el => {
-                        if (!el.closest('.row-inpt-trie')) {
-                            el.style.display = 'none';
-                        }
+                    // Ajoute un listener à chaque input
+                    inputs.forEach(input => {
+                        input.addEventListener('input', checkInputs);
+                        input.addEventListener('change', checkInputs); // Pour les readonly modifiés via JS
                     });
 
-                resetBtn.disabled = true;
-            });
-        });
+                    // Réinitialise tous les champs + .active_option
+                    resetBtn.addEventListener('click', () => {
+                        inputs.forEach(input => {
+                            input.value = '';
+                            input.dataset.selectedValue = ''; // pour les filtres personnalisés
+                        });
 
-    </script>
+                        // Supprime les classes actives éventuelles (ex: .active_option)
+                        document.querySelectorAll('.active_option').forEach(el => {
+                            el.classList.remove('active_option');
+                        });
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
+                        // Ferme les dropdown si ouverts (optionnel)
+                        document.querySelectorAll('.option_select_filter').forEach(el => {
+                            el.style.display = 'none';
+                        });
 
 
-            // Sélectionne tous les inputs y compris celui du champ de recherche principal
-            const filtreInputs = document.querySelectorAll('.section_filtre_label input');
-            const resetBtn = document.getElementById('reset_filtrer');
+                        resetBtn.disabled = true;
+                    });
+                });
+            </script>
 
-            function checkInputs() {
-                const isAnyFilled = Array.from(filtreInputs).some(input => input.value.trim() !== '');
-                resetBtn.disabled = !isAnyFilled;
-            }
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const resetBtn = document.getElementById('reset_filtrer');
 
-            filtreInputs.forEach(input => {
-                input.addEventListener('input', checkInputs);
-                input.addEventListener('change', checkInputs);
-            });
+                    // Sélectionne uniquement les inputs des filtres hors zone "Trier par"
+                    const filtreInputs = Array.from(document.querySelectorAll('.section_filtre_label input'))
+                        .filter(input => !input.closest('.row-inpt-trie'));
 
-            resetBtn.addEventListener('click', () => {
-                filtreInputs.forEach(input => {
-                    input.value = '';
-                    input.dataset.selectedValue = ''; // Si tu utilises des filtres personnalisés
+                    function checkInputs() {
+                        const isAnyFilled = filtreInputs.some(input => input.value.trim() !== '');
+                        resetBtn.disabled = !isAnyFilled;
+                    }
+
+                    filtreInputs.forEach(input => {
+                        input.addEventListener('input', checkInputs);
+                        input.addEventListener('change', checkInputs);
+                    });
+
+                    resetBtn.addEventListener('click', () => {
+                        // Reset uniquement les inputs hors zone "Trier par"
+                        filtreInputs.forEach(input => {
+                            input.value = '';
+                            input.dataset.selectedValue = '';
+                        });
+
+                        // Enlève .active_option uniquement hors zone "Trier par"
+                        document.querySelectorAll('.section_filtre_label:not(.row-inpt-trie .section_filtre_label) .active_option')
+                            .forEach(el => el.classList.remove('active_option'));
+
+                        // Cache dropdowns uniquement hors zone "Trier par"
+                        document.querySelectorAll('.option_select_filter')
+                            .forEach(el => {
+                                if (!el.closest('.row-inpt-trie')) {
+                                    el.style.display = 'none';
+                                }
+                            });
+
+                        resetBtn.disabled = true;
+                    });
                 });
 
-                document.querySelector(".option_select_filter").style.display = "none";
-                currentPage = 1;
-                renderCategories();
+            </script>
 
-                // Retire toutes les classes .active_option
-                document.querySelectorAll('.active_option').forEach(el => {
-                    el.classList.remove('active_option');
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+
+
+                    // Sélectionne tous les inputs y compris celui du champ de recherche principal
+                    const filtreInputs = document.querySelectorAll('.section_filtre_label input');
+                    const resetBtn = document.getElementById('reset_filtrer');
+
+                    function checkInputs() {
+                        const isAnyFilled = Array.from(filtreInputs).some(input => input.value.trim() !== '');
+                        resetBtn.disabled = !isAnyFilled;
+                    }
+
+                    filtreInputs.forEach(input => {
+                        input.addEventListener('input', checkInputs);
+                        input.addEventListener('change', checkInputs);
+                    });
+
+                    resetBtn.addEventListener('click', () => {
+                        filtreInputs.forEach(input => {
+                            input.value = '';
+                            input.dataset.selectedValue = ''; // Si tu utilises des filtres personnalisés
+                        });
+
+                        // Retire toutes les classes .active_option
+                        document.querySelectorAll('.active_option').forEach(el => {
+                            el.classList.remove('active_option');
+                        });
+
+                        // Ferme les dropdown personnalisés si nécessaire
+                        document.querySelectorAll('.option_select_filter').forEach(el => {
+                            el.style.display = 'none';
+                        });
+
+                        // Désactive à nouveau le bouton reset
+                        resetBtn.disabled = true;
+                    });
+                });
+            </script>
+
+
+            <script>
+
+                document.addEventListener("DOMContentLoaded", () => {
+                    const checkpop = document.getElementById('checkpop');
+                    const plusText = document.querySelector('.plus_text_strong');
+                    const btnReset = document.querySelector('.btn_reset_filter');
+
+                    checkpop.addEventListener('input', function (e) {
+                        const isChecked = e.target.checked;
+
+
+                        if (plusText) {
+                            plusText.textContent = isChecked ? '-' : '+';
+                            btnReset.style.margin = isChecked ? '1em 0' : '0';
+                        }
+                    });
                 });
 
-                // Ferme les dropdown personnalisés si nécessaire
-                document.querySelectorAll('.option_select_filter').forEach(el => {
-                    el.style.display = 'none';
+
+
+
+                // Fermer si clic à l’extérieur
+                document.addEventListener('click', function (e) {
+                    document.querySelectorAll('.column_filter_label').forEach(label => {
+                        if (!label.contains(e.target)) {
+                            const options = label.querySelector('.option_select_filter');
+                            if (options) options.style.display = 'none';
+                        }
+                    });
                 });
 
-                // Désactive à nouveau le bouton reset
-                resetBtn.disabled = true;
-            });
-        });
-    </script>
+                // Toggle de l'affichage du menu quand on clique sur l'input
+                document.querySelectorAll('.column_filter_label input').forEach(input => {
+                    input.addEventListener('click', function () {
+                        const container = input.closest('.column_filter_label');
+                        const options = container.querySelector('.option_select_filter');
+                        options.style.display = options.style.display === 'block' ? 'none' : 'block';
+                    });
+                });
 
-    <script>
-        const categories = [
-            "Catégorie 1", "Catégorie 2", "Catégorie 3",
-            "Catégorie 4", "Catégorie 5", "Catégorie 6",
-            "Catégorie 7", "Catégorie 8", "Catégorie 9",
-            "Catégorie 10", "Catégorie 11", "Catégorie 12",
-            "Catégorie 13", "Catégorie 14", "Catégorie 15"
-        ];
+                // Sélection d’une option
+                function selectOption(optionDiv) {
+                    const container = optionDiv.closest('.column_filter_label');
+                    const input = container.querySelector('input');
 
-        const itemsPerPage = 9;
-        let currentPage = 1;
+                    const value = optionDiv.getAttribute('data-value');
+                    const label = optionDiv.textContent.trim();
 
-        const categoryContainer = document.getElementById("categoryItems");
-        const paginationContainer = document.getElementById("paginationButtons");
+                    input.value = label;
+                    input.setAttribute('data-selected-value', value);
 
-        function renderCategories() {
-            categoryContainer.innerHTML = "";
-            paginationContainer.innerHTML = "";
+                    // Gérer les classes actives
+                    container.querySelectorAll('.option_select_filter div').forEach(opt => {
+                        opt.classList.remove('active_option');
+                    });
+                    optionDiv.classList.add('active_option');
 
-            const start = (currentPage - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            const visibleCategories = categories.slice(start, end);
+                    // Fermer le menu
+                    container.querySelector('.option_select_filter').style.display = 'none';
 
-            visibleCategories.forEach((cat, index) => {
-                const item = document.createElement("div");
-                item.className = "option_select_filter_item";
-                item.setAttribute("onclick", "selectOption(this)");
-                item.dataset.value = `Option${start + index + 1}`;
-                item.innerHTML = `<p>${cat}</p>`;
-                categoryContainer.appendChild(item);
-            });
-
-            const totalPages = Math.ceil(categories.length / itemsPerPage);
-
-            const prevBtn = document.createElement("button");
-            prevBtn.textContent = "<< Précédent";
-            prevBtn.disabled = currentPage === 1;
-            prevBtn.onclick = (e) => {
-                e.stopPropagation();
-                changePage(-1);
-            };
-            prevBtn.classList.add("pagination-button");
-
-            const nextBtn = document.createElement("button");
-            nextBtn.textContent = "Suivant >>";
-            nextBtn.disabled = currentPage === totalPages;
-            nextBtn.onclick = (e) => {
-                e.stopPropagation();
-                changePage(1);
-            };
-            nextBtn.classList.add("pagination-button");
-
-            paginationContainer.appendChild(prevBtn);
-            paginationContainer.appendChild(nextBtn);
-        }
-
-        function changePage(direction) {
-            const totalPages = Math.ceil(categories.length / itemsPerPage);
-            currentPage += direction;
-            if (currentPage < 1) currentPage = 1;
-            if (currentPage > totalPages) currentPage = totalPages;
-            renderCategories();
-        }
-
-        function selectOption(el) {
-            alert(`Tu as sélectionné : ${el.dataset.value}`);
-        }
-
-        // Initialisation
-        renderCategories();
-    </script>
-
-
-
-    <script>
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const checkpop = document.getElementById('checkpop');
-            const plusText = document.querySelector('.plus_text_strong');
-            const btnReset = document.querySelector('.btn_reset_filter');
-
-            checkpop.addEventListener('input', function (e) {
-                const isChecked = e.target.checked;
-
-
-                if (plusText) {
-                    plusText.textContent = isChecked ? '-' : '+';
-                    btnReset.style.margin = isChecked ? '1em 0' : '0.3em 0';
+                    document.getElementById('reset_filtrer').disabled = false;
                 }
-            });
-        });
+
+                // recup value
+                // const selected = document.querySelector('input[data-selected-value]');
+                //     console.log(selected.getAttribute('data-selected-value')); // ex : "culture"
 
 
+                // SVVG ACTIVE
 
 
-        // Fermer si clic à l’extérieur
-        document.addEventListener('click', function (e) {
+            </script>
 
 
-
-            document.querySelectorAll('.column_filter_label').forEach(label => {
-                if (!label.contains(e.target)) {
-                    const options = label.querySelector('.option_select_filter');
-                    if (options) options.style.display = 'none';
-                    ;
-
-                }
-            });
-        });
-
-        // Toggle de l'affichage du menu quand on clique sur l'input
-        document.querySelectorAll('.column_filter_label input').forEach(input => {
-            input.addEventListener('click', function () {
-                const container = input.closest('.column_filter_label');
-                const options = container.querySelector('.option_select_filter');
-                options.style.display = options.style.display === 'block' ? 'none' : 'block';
-
-
-            });
-        });
-
-        // Sélection d’une option
-        function selectOption(optionDiv) {
-            const container = optionDiv.closest('.column_filter_label');
-            const input = container.querySelector('input');
-
-            const value = optionDiv.getAttribute('data-value');
-            const label = optionDiv.textContent.trim();
-
-            input.value = label;
-            input.setAttribute('data-selected-value', value);
-
-            // Gérer les classes actives
-            container.querySelectorAll('.option_select_filter div').forEach(opt => {
-                opt.classList.remove('active_option');
-            });
-            optionDiv.classList.add('active_option');
-
-            // Fermer le menu
-            container.querySelector('.option_select_filter').style.display = 'none';
-
-            document.getElementById('reset_filtrer').disabled = false;
-        }
-
-        // recup value
-        // const selected = document.querySelector('input[data-selected-value]');
-        //     console.log(selected.getAttribute('data-selected-value')); // ex : "culture"
-
-
-        // SVVG ACTIVE
-
-
-    </script>
-
-
-    <script>
-        document.querySelectorAll('[data-pop]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const id = btn.getAttribute('data-pop');
-                const popup = document.getElementById(id);
-                if (popup.style.display === 'block') {
-                    popup.style.display = 'none';
-                } else {
-                    popup.style.display = 'block';
-                }
-            });
-        });
-    </script>
+            <script>
+                document.querySelectorAll('[data-pop]').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const id = btn.getAttribute('data-pop');
+                        const popup = document.getElementById(id);
+                        if (popup.style.display === 'block') {
+                            popup.style.display = 'none';
+                        } else {
+                            popup.style.display = 'block';
+                        }
+                    });
+                });
+            </script>
 
 </body>
 
