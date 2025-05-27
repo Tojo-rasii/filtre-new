@@ -401,38 +401,39 @@
 
         /* CRITERE */
         .section_plus_critere {
-            background: #fcfcfc;
+            /* background: #fcfcfc; */
             display: flex;
             flex-direction: row;
             gap: 1.5em;
             align-items: center;
             /* outline: 1.5px solid #00919e; */
+            /* color: #d8d8d8; */
             color: #00919e;
-            font-weight: 600;
+            font-weight: 500;
             border-radius: 0.7em;
             width: max-content;
-            height: 4.2em;
+            /* height: 4.2em; */
             cursor: pointer;
-            padding: 1em 1.5em;
+            /* padding: 1em 1.5em; */
             transition: 0.1s;
         }
 
         .section_plus_critere:hover {
-            background: #f8f8f8f1;
+            color: #00919e;
 
 
         }
 
         .btn_reset_filter {
-            background: #fcfcfc;
+            background: none;
             outline: none;
             border: none;
-            padding: 1em 1.5em;
+            /* padding: 1em 1.5em; */
             /* color: #fff; */
             color: #00919e;
-            height: 4.2em;
+            /* height: 4.2em; */
 
-            font-weight: 600;
+            font-weight: 500;
             border-radius: 0.7em;
             width: max-content;
             /* margin: 1em 0; */
@@ -441,13 +442,14 @@
         }
 
         .btn_reset_filter:hover {
-            background: #f8f8f8f1;
+            /* background: #f8f8f8f1; */
+            color: #086e77;
 
 
         }
 
         .btn_reset_filter:disabled:is(:hover) {
-            background: #fcfcfc;
+            /* background: #fcfcfc; */
 
 
         }
@@ -488,7 +490,8 @@
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
-            gap: 1.5em;
+            gap: 3em;
+            margin: 0.8em 0;
         }
 
         .i_add_svg {
@@ -503,7 +506,18 @@
             justify-content: center;
             border-radius: 50%;
             margin-right: 0.3em;
+            /* rotate: 0; */
+            transition: rotate 0.1s;
         }
+
+        .text_show_critere:hover {
+            color: #086e77;
+
+        }
+
+        /* .text_show_critere:hover .i_add_svg path {
+            stroke: #00adbd !important;
+        } */
     </style>
 </head>
 
@@ -594,9 +608,9 @@
 
                 </div>
 
-                <div class="section_filtre_reset">
+                <!-- <div class="section_filtre_reset">
                     <hr>
-                </div>
+                </div> -->
 
                 <div class="btn_reset_criteres">
 
@@ -625,9 +639,9 @@
                 </div>
 
 
-                <div class="section_filtre_reset">
+                <!-- <div class="section_filtre_reset">
                     <hr>
-                </div>
+                </div> -->
 
 
                 <div id="popup1" style="display:none;">
@@ -1025,15 +1039,15 @@
         document.addEventListener("DOMContentLoaded", () => {
             const checkpop = document.getElementById('checkpop');
             const textShow = document.querySelector('.text_show_critere');
-            const pathSvg = document.querySelector('.path_plus_svg');
+            const iconPlusSvg = document.querySelector('.i_add_svg');
 
             checkpop.addEventListener('input', function (e) {
                 const isChecked = e.target.checked;
 
 
                 if (textShow) {
-                    textShow.textContent = isChecked ? 'Afficher moins les critères' : 'Afficher tous les critères';
-                    pathSvg.style.display = isChecked ? 'none' : 'block';
+                    textShow.textContent = isChecked ? 'Cacher les critères' : 'Afficher tous les critères';
+                    iconPlusSvg.style.rotate = !isChecked ? '0deg' : '45deg';
                 }
             });
         });
